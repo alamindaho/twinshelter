@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWINSHELTER CONSULT LTD - Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>try { if (localStorage.getItem('theme') === 'light') { document.documentElement.classList.add('light-theme'); } } catch (e) {}</script>
+    <script>tailwind.config = { theme: { extend: { colors: { 'gold': '#EBCB48', 'night': 'var(--bg-primary)', 'charcoal': 'var(--bg-secondary)', 'ash': 'var(--border-color)', 'main': 'var(--text-primary)', 'muted': 'var(--text-secondary)' }, fontFamily: { 'display': ['Syne', 'sans-serif'], 'body': ['Inter', 'sans-serif'] }}}} </script>
+</head>
+<body class="bg-night text-main">
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 ease-out py-6">
+        <div class="w-full px-6 md:px-8 flex justify-between items-center">
+            
+            <!-- Logo Area (Icon + Text) -->
+            <a href="index.html" class="flex items-center gap-3 z-50">
+                <!-- Replace src with your actual logo image path -->
+                <img src="images/twinshelter-logo.png" alt="TWINSHELTER Icon" class="h-10 w-10 md:h-12 md:w-12 object-cover border border-ash">
+                <div class="flex flex-col">
+                    <div class="text-1xl font-display font-extrabold tracking-wider text-main">TWIN<span class="text-gold">SHELTER</span></div>
+                    <div class="text-[10px] tracking-[0.3em] text-muted uppercase">CONSULT LTD | RC-7861108</div>
+                </div>
+            </a>
+
+            <ul class="hidden md:flex items-center space-x-8 text-sm font-medium uppercase tracking-wider">
+                <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+                <li><a href="about.html" class="hover:text-gold transition-colors">About Us</a></li>
+                <li><a href="services.html" class="text-gold">Services</a></li>
+                <li><a href="projects.html" class="hover:text-gold transition-colors">Projects</a></li>
+                <li><button class="theme-toggle hover:text-gold transition-colors text-lg flex items-center justify-center w-8 h-8"><i class="theme-icon fas fa-sun"></i></button></li>
+                <li><a href="contact.html" class="bg-gold text-night px-5 py-3 rounded-full hover:bg-white hover:text-night transition-all duration-300 font-bold">Contact Us</a></li>
+            </ul>
+            <div class="md:hidden flex items-center space-x-4 z-50 relative"><button class="theme-toggle text-main text-xl"><i class="theme-icon fas fa-sun"></i></button><button id="menuToggle" class="text-main text-2xl"><i class="fas fa-bars"></i></button></div>
+        </div>
+        <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+            <div class="px-6 md:px-8 flex flex-col space-y-3 text-lg font-display uppercase mt-4 pt-4 border-t" style="border-color: var(--border-faint);"><a href="index.html" class="mobile-link text-gold py-2">Home</a><a href="about.html" class="mobile-link hover:text-gold py-2">About Us</a><a href="services.html" class="mobile-link hover:text-gold py-2">Services</a><a href="projects.html" class="mobile-link hover:text-gold py-2">Projects</a><a href="contact.html" class="mobile-link hover:text-gold py-2">Contact Us</a></div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative pt-40 pb-24 md:pt-48 md:pb-32 bg-charcoal overflow-hidden border-b border-ash">
+        <div class="absolute inset-0 contact-overlay z-0"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <p class="text-gold tracking-[0.4em] text-xs md:text-sm uppercase mb-4 reveal">Our Expertise</p>
+            <h1 class="text-4xl md:text-6xl font-display font-extrabold leading-tight text-main reveal">Our Services</h1>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 md:py-32 bg-night">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card reveal-scale border p-8 rounded-lg flex flex-col" style="transition-delay: 0.1s;">
+                    <i class="fas fa-building text-gold text-5xl mb-6"></i>
+                    <h3 class="text-2xl font-display font-bold text-main mb-4">General Contracting & Construction</h3>
+                    <p class="text-muted text-sm leading-relaxed">Erection, construction, modification, pulling down, rebuilding, and enlargement of houses, bungalows, flats, and general civil engineering works.</p>
+                </div>
+                <div class="service-card reveal-scale border p-8 rounded-lg flex flex-col" style="transition-delay: 0.25s;">
+                    <i class="fas fa-city text-gold text-5xl mb-6"></i>
+                    <h3 class="text-2xl font-display font-bold text-main mb-4">Real Estate & Infrastructure Development</h3>
+                    <p class="text-muted text-sm leading-relaxed">Land acquisition, estate management, infrastructure development, and property improvement across Nigeria.</p>
+                </div>
+                <div class="service-card reveal-scale border p-8 rounded-lg flex flex-col" style="transition-delay: 0.4s;">
+                    <i class="fas fa-drafting-compass text-gold text-5xl mb-6"></i>
+                    <h3 class="text-2xl font-display font-bold text-main mb-4">Urban & Environmental Planning</h3>
+                    <p class="text-muted text-sm leading-relaxed">Town planning, landscape architecture, and land development consultancy to balance aesthetics and functionality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-24 md:py-32 bg-charcoal">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <p class="text-gold tracking-[0.3em] text-xs uppercase mb-4">Why Choose Us</p>
+                <h2 class="text-3xl md:text-5xl font-display font-bold leading-tight text-main">Professional & <span class="text-gold">Experienced</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="service-card reveal-scale border p-8 rounded-lg" style="transition-delay: 0.1s;"><i class="fas fa-user-tie text-4xl mb-6"></i><h3 class="text-xl font-display font-bold text-main mb-3">Professional Experts</h3><p class="text-muted text-sm leading-relaxed">Our team consists of experts with extensive experience and competence in the construction field.</p></div>
+                <div class="service-card reveal-scale border p-8 rounded-lg" style="transition-delay: 0.25s;"><i class="fas fa-project-diagram text-4xl mb-6"></i><h3 class="text-xl font-display font-bold text-main mb-3">Diverse Experience</h3><p class="text-muted text-sm leading-relaxed">We bring vast experience across various scales and types of construction projects.</p></div>
+                <div class="service-card reveal-scale border p-8 rounded-lg" style="transition-delay: 0.4s;"><i class="fas fa-ruler-combined text-4xl mb-6"></i><h3 class="text-xl font-display font-bold text-main mb-3">High Detail & Precision</h3><p class="text-muted text-sm leading-relaxed">We maintain strict attention to detail and precision at every stage of our work.</p></div>
+                <div class="service-card reveal-scale border p-8 rounded-lg" style="transition-delay: 0.55s;"><i class="fas fa-check-circle text-4xl mb-6"></i><h3 class="text-xl font-display font-bold text-main mb-3">Quality Results</h3><p class="text-muted text-sm leading-relaxed">We are committed to delivering durable and world-class structural results.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-night border-t border-ash py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center"><div class="mb-6 md:mb-0 text-center md:text-left"><div class="text-2xl font-display font-extrabold tracking-wider text-main">TWIN<span class="text-gold">SHELTER</span></div><p class="text-xs tracking-[0.3em] text-muted uppercase mt-2">Planners | Developers | Managers</p></div><div class="flex gap-6 text-muted text-xl"><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-linkedin"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-instagram"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-twitter"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-facebook"></i></a></div></div>
+        <div class="container mx-auto px-6 mt-8 pt-8 border-t text-center" style="border-color: var(--border-faint);"><p class="text-muted text-xs">© 2024 Twinshelter Consult Ltd. RC-7861108. All Rights Reserved.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWINSHELTER CONSULT LTD - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>try { if (localStorage.getItem('theme') === 'light') { document.documentElement.classList.add('light-theme'); } } catch (e) {}</script>
+    <script>tailwind.config = { theme: { extend: { colors: { 'gold': '#EBCB48', 'night': 'var(--bg-primary)', 'charcoal': 'var(--bg-secondary)', 'ash': 'var(--border-color)', 'main': 'var(--text-primary)', 'muted': 'var(--text-secondary)' }, fontFamily: { 'display': ['Syne', 'sans-serif'], 'body': ['Inter', 'sans-serif'] }}}} </script>
+</head>
+<body class="bg-night text-main">
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 ease-out py-6">
+        <div class="w-full px-6 md:px-8 flex justify-between items-center">
+            
+            <!-- Logo Area (Icon + Text) -->
+            <a href="index.html" class="flex items-center gap-3 z-50">
+                <!-- Replace src with your actual logo image path -->
+                <img src="images/twinshelter-logo.png" alt="TWINSHELTER Icon" class="h-10 w-10 md:h-12 md:w-12 object-cover border border-ash">
+                <div class="flex flex-col">
+                    <div class="text-1xl font-display font-extrabold tracking-wider text-main">TWIN<span class="text-gold">SHELTER</span></div>
+                    <div class="text-[10px] tracking-[0.3em] text-muted uppercase">CONSULT LTD | RC-7861108</div>
+                </div>
+            </a>
+
+            <ul class="hidden md:flex items-center space-x-8 text-sm font-medium uppercase tracking-wider">
+                <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+                <li><a href="about.html" class="hover:text-gold transition-colors">About Us</a></li>
+                <li><a href="services.html" class="hover:text-gold transition-colors">Services</a></li>
+                <li><a href="projects.html" class="text-gold">Projects</a></li>
+                <li><button class="theme-toggle hover:text-gold transition-colors text-lg flex items-center justify-center w-8 h-8"><i class="theme-icon fas fa-sun"></i></button></li>
+                <li><a href="contact.html" class="bg-gold text-night px-5 py-3 rounded-full hover:bg-white hover:text-night transition-all duration-300 font-bold">Contact Us</a></li>
+            </ul>
+            <div class="md:hidden flex items-center space-x-4 z-50 relative"><button class="theme-toggle text-main text-xl"><i class="theme-icon fas fa-sun"></i></button><button id="menuToggle" class="text-main text-2xl"><i class="fas fa-bars"></i></button></div>
+        </div>
+        <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+            <div class="px-6 md:px-8 flex flex-col space-y-3 text-lg font-display uppercase mt-4 pt-4 border-t" style="border-color: var(--border-faint);"><a href="index.html" class="mobile-link text-gold py-2">Home</a><a href="about.html" class="mobile-link hover:text-gold py-2">About Us</a><a href="services.html" class="mobile-link hover:text-gold py-2">Services</a><a href="projects.html" class="mobile-link hover:text-gold py-2">Projects</a><a href="contact.html" class="mobile-link hover:text-gold py-2">Contact Us</a></div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative pt-40 pb-24 md:pt-48 md:pb-32 bg-charcoal overflow-hidden border-b border-ash">
+        <div class="absolute inset-0 contact-overlay z-0"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <p class="text-gold tracking-[0.4em] text-xs md:text-sm uppercase mb-4 reveal">Our Portfolio</p>
+            <h1 class="text-4xl md:text-6xl font-display font-extrabold leading-tight text-main reveal">Project Portfolio</h1>
+            <p class="text-muted mt-6 max-w-2xl mx-auto reveal">We have completed various projects with satisfactory results and quality standards. Explore a selection of our transformative developments across various sectors.</p>
+        </div>
+    </header>
+
+    <!-- Projects Grid Section -->
+    <section id="projects-grid" class="py-24 md:py-32 bg-night">
+        <div class="container mx-auto px-6">
+            
+            <!-- Category 1: Real Estate -->
+            <div class="mb-24 reveal">
+                <h3 class="text-2xl md:text-3xl font-display font-bold text-gold mb-8 border-b border-ash pb-4">Real Estate</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.05s;"><img loading="lazy" src="https://images.unsplash.com/photo-1449157294152-bd2df4f6b8a1?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.1s;"><img loading="lazy" src="https://images.unsplash.com/photo-1486401899868-0e1ca3ce9011?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.15s;"><img loading="lazy" src="https://images.unsplash.com/photo-1512917774080-9991f1c4d750?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.2s;"><img loading="lazy" src="https://images.unsplash.com/photo-1564013799919-abca9800d76b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.05s;"><img loading="lazy" src="https://images.unsplash.com/photo-1449157294152-bd2df4f6b8a1?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.1s;"><img loading="lazy" src="https://images.unsplash.com/photo-1486401899868-0e1ca3ce9011?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.15s;"><img loading="lazy" src="https://images.unsplash.com/photo-1512917774080-9991f1c4d750?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.2s;"><img loading="lazy" src="https://images.unsplash.com/photo-1564013799919-abca9800d76b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.05s;"><img loading="lazy" src="https://images.unsplash.com/photo-1449157294152-bd2df4f6b8a1?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.1s;"><img loading="lazy" src="https://images.unsplash.com/photo-1486401899868-0e1ca3ce9011?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.15s;"><img loading="lazy" src="https://images.unsplash.com/photo-1512917774080-9991f1c4d750?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.2s;"><img loading="lazy" src="https://images.unsplash.com/photo-1564013799919-abca9800d76b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                </div>
+            </div>
+
+            <!-- Category 2: House Construction -->
+            <div class="mb-24 reveal">
+                <h3 class="text-2xl md:text-3xl font-display font-bold text-gold mb-8 border-b border-ash pb-4">House Construction</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.05s;"><img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb7efc7b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.1s;"><img loading="lazy" src="https://images.unsplash.com/photo-1581094284096-03a6d3b0629b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.15s;"><img loading="lazy" src="https://images.unsplash.com/photo-1597007030739-6d2c6c5e9c92?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.2s;"><img loading="lazy" src="https://images.unsplash.com/photo-1581094271901-5312c3f23f6b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.05s;"><img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb7efc7b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.1s;"><img loading="lazy" src="https://images.unsplash.com/photo-1581094284096-03a6d3b0629b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.15s;"><img loading="lazy" src="https://images.unsplash.com/photo-1597007030739-6d2c6c5e9c92?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.2s;"><img loading="lazy" src="https://images.unsplash.com/photo-1581094271901-5312c3f23f6b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.05s;"><img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb7efc7b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.1s;"><img loading="lazy" src="https://images.unsplash.com/photo-1581094284096-03a6d3b0629b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.15s;"><img loading="lazy" src="https://images.unsplash.com/photo-1597007030739-6d2c6c5e9c92?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.2s;"><img loading="lazy" src="https://images.unsplash.com/photo-1581094271901-5312c3f23f6b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                </div>
+            </div>
+
+            <!-- Category 3: Drainage & Interlock -->
+            <div class="reveal">
+                <h3 class="text-2xl md:text-3xl font-display font-bold text-gold mb-8 border-b border-ash pb-4">Drainage & Interlock</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.05s;"><img loading="lazy" src="https://images.unsplash.com/photo-1605648917366-e1c2c92da66d?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.1s;"><img loading="lazy" src="https://images.unsplash.com/photo-1597008723967-886c5f3d5d8a?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.15s;"><img loading="lazy" src="https://images.unsplash.com/photo-1545457139-150f24d849e9?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.2s;"><img loading="lazy" src="https://images.unsplash.com/photo-1538433609508-496373719377?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.05s;"><img loading="lazy" src="https://images.unsplash.com/photo-1605648917366-e1c2c92da66d?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.1s;"><img loading="lazy" src="https://images.unsplash.com/photo-1597008723967-886c5f3d5d8a?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.15s;"><img loading="lazy" src="https://images.unsplash.com/photo-1545457139-150f24d849e9?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.2s;"><img loading="lazy" src="https://images.unsplash.com/photo-1538433609508-496373719377?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.05s;"><img loading="lazy" src="https://images.unsplash.com/photo-1605648917366-e1c2c92da66d?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.1s;"><img loading="lazy" src="https://images.unsplash.com/photo-1597008723967-886c5f3d5d8a?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.15s;"><img loading="lazy" src="https://images.unsplash.com/photo-1545457139-150f24d849e9?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                    <div class="project-card relative overflow-hidden rounded-lg h-64 reveal-scale" style="transition-delay: 0.2s;"><img loading="lazy" src="https://images.unsplash.com/photo-1538433609508-496373719377?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover"><div class="project-overlay absolute inset-0 flex items-center justify-center" style="background-color: var(--overlay-bg);"><i class="fas fa-expand text-gold text-2xl"></i></div></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-night border-t border-ash py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center"><div class="mb-6 md:mb-0 text-center md:text-left"><div class="text-2xl font-display font-extrabold tracking-wider text-main">TWIN<span class="text-gold">SHELTER</span></div><p class="text-xs tracking-[0.3em] text-muted uppercase mt-2">Planners | Developers | Managers</p></div><div class="flex gap-6 text-muted text-xl"><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-linkedin"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-instagram"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-twitter"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-facebook"></i></a></div></div>
+        <div class="container mx-auto px-6 mt-8 pt-8 border-t text-center" style="border-color: var(--border-faint);"><p class="text-muted text-xs">© 2024 Twinshelter Consult Ltd. RC-7861108. All Rights Reserved.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

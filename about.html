@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWINSHELTER CONSULT LTD - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>try { if (localStorage.getItem('theme') === 'light') { document.documentElement.classList.add('light-theme'); } } catch (e) {}</script>
+    <script>tailwind.config = { theme: { extend: { colors: { 'gold': '#EBCB48', 'night': 'var(--bg-primary)', 'charcoal': 'var(--bg-secondary)', 'ash': 'var(--border-color)', 'main': 'var(--text-primary)', 'muted': 'var(--text-secondary)' }, fontFamily: { 'display': ['Syne', 'sans-serif'], 'body': ['Inter', 'sans-serif'] }}}} </script>
+</head>
+<body class="bg-night text-main">
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 ease-out py-6">
+        <div class="w-full px-6 md:px-8 flex justify-between items-center">
+            
+            <!-- Logo Area (Icon + Text) -->
+            <a href="index.html" class="flex items-center gap-3 z-50">
+                <!-- Replace src with your actual logo image path -->
+                <img src="images/twinshelter-logo.png" alt="TWINSHELTER Icon" class="h-10 w-10 md:h-12 md:w-12 object-cover border border-ash">
+                <div class="flex flex-col">
+                    <div class="text-1xl font-display font-extrabold tracking-wider text-main">TWIN<span class="text-gold">SHELTER</span></div>
+                    <div class="text-[10px] tracking-[0.3em] text-muted uppercase">CONSULT LTD | RC-7861108</div>
+                </div>
+            </a>
+
+            <ul class="hidden md:flex items-center space-x-8 text-sm font-medium uppercase tracking-wider">
+                <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+                <li><a href="about.html" class="text-gold">About Us</a></li>
+                <li><a href="services.html" class="hover:text-gold transition-colors">Services</a></li>
+                <li><a href="projects.html" class="hover:text-gold transition-colors">Projects</a></li>
+                <li><button class="theme-toggle hover:text-gold transition-colors text-lg flex items-center justify-center w-8 h-8"><i class="theme-icon fas fa-sun"></i></button></li>
+                <li><a href="contact.html" class="bg-gold text-night px-5 py-3 rounded-full hover:bg-white hover:text-night transition-all duration-300 font-bold">Contact Us</a></li>
+            </ul>
+            <div class="md:hidden flex items-center space-x-4 z-50 relative"><button class="theme-toggle text-main text-xl"><i class="theme-icon fas fa-sun"></i></button><button id="menuToggle" class="text-main text-2xl"><i class="fas fa-bars"></i></button></div>
+        </div>
+        <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+            <div class="px-6 md:px-8 flex flex-col space-y-3 text-lg font-display uppercase mt-4 pt-4 border-t" style="border-color: var(--border-faint);"><a href="index.html" class="mobile-link text-gold py-2">Home</a><a href="about.html" class="mobile-link hover:text-gold py-2">About Us</a><a href="services.html" class="mobile-link hover:text-gold py-2">Services</a><a href="projects.html" class="mobile-link hover:text-gold py-2">Projects</a><a href="contact.html" class="mobile-link hover:text-gold py-2">Contact Us</a></div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative pt-40 pb-24 md:pt-48 md:pb-32 bg-charcoal overflow-hidden border-b border-ash">
+        <div class="absolute inset-0 contact-overlay z-0"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <p class="text-gold tracking-[0.4em] text-xs md:text-sm uppercase mb-4 reveal">Who We Are</p>
+            <h1 class="text-4xl md:text-6xl font-display font-extrabold leading-tight text-main reveal">About TWINSHELTER</h1>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 md:py-32 bg-night relative">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal-left">
+                    <h2 class="text-3xl md:text-5xl font-display font-bold leading-tight mb-6 text-main">A Global Standard in <span class="text-gold">Real Estate & Construction</span></h2>
+                    <p class="text-muted leading-relaxed mb-6">TWINSHELTER CONSULT LTD is a private limited liability company incorporated in Nigeria under the Companies and Allied Matters Act, 2020. We specialize in construction, civil engineering, infrastructure, and real estate services, providing property development and town planning solutions across Nigeria.</p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="flex items-center gap-3 text-muted"><i class="fas fa-check text-gold"></i> Experienced in various projects</div>
+                        <div class="flex items-center gap-3 text-muted"><i class="fas fa-check text-gold"></i> Professional team</div>
+                        <div class="flex items-center gap-3 text-muted"><i class="fas fa-check text-gold"></i> High work standards</div>
+                        <div class="flex items-center gap-3 text-muted"><i class="fas fa-check text-gold"></i> Client satisfaction focus</div>
+                    </div>
+                </div>
+                <div class="relative reveal-right">
+                    <img src="images/naksha-banwao-3ddHcjHmiGw-unsplash.jpg" alt="Modern Architecture" class="rounded-lg shadow-2xl w-full h-[500px] object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission" class="py-24 md:py-32 bg-charcoal relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <p class="text-gold tracking-[0.3em] text-xs uppercase mb-4">Our Direction and Goals</p>
+                <h2 class="text-3xl md:text-5xl font-display font-bold leading-tight text-main">Vision & <span class="text-gold">Mission</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="reveal-left p-8 border border-ash rounded-xl bg-night">
+                    <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center text-night text-xl mb-6"><i class="fas fa-binoculars"></i></div>
+                    <h3 class="text-2xl font-display font-bold text-main mb-4">Our Vision</h3>
+                    <p class="text-muted leading-relaxed mb-4">To become a trusted construction company and continue to grow through innovation and quality service.</p>
+                    <ul class="space-y-2 text-muted text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-arrow-right text-gold"></i> To become a trusted and leading construction company</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-arrow-right text-gold"></i> To provide high-quality results on every project</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-arrow-right text-gold"></i> To become the first choice for clients</li>
+                    </ul>
+                </div>
+                <div class="reveal-right p-8 border border-ash rounded-xl bg-night">
+                    <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center text-night text-xl mb-6"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="text-2xl font-display font-bold text-main mb-4">Our Mission</h3>
+                    <p class="text-muted leading-relaxed mb-4">To provide the best and most professional construction services while prioritizing quality and client satisfaction.</p>
+                    <ul class="space-y-2 text-muted text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-arrow-right text-gold"></i> To provide the best professional construction services</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-arrow-right text-gold"></i> To complete projects on time and according to standards</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-arrow-right text-gold"></i> To prioritize quality and client satisfaction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 md:py-32 bg-night relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <p class="text-gold tracking-[0.3em] text-xs uppercase mb-4">Work Process</p>
+                <h2 class="text-3xl md:text-5xl font-display font-bold leading-tight text-main">Systematic & <span class="text-gold">Structured</span></h2>
+            </div>
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute top-0 left-4 md:left-1/2 w-1 h-full bg-ash -translate-x-1/2 timeline-draw"></div>
+                <div class="relative mb-16 md:mb-24 flex items-center">
+                    <div class="reveal-scale absolute left-4 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gold border-4 border-night z-20 flex items-center justify-center text-night"><i class="fas fa-drafting-compass"></i></div>
+                    <div class="reveal-left w-full md:w-1/2 md:pr-12 pl-16 md:pl-0 md:text-right relative overflow-hidden"><div class="process-number right-0">01</div><div class="bg-charcoal p-8 rounded-xl border border-ash relative z-10"><h3 class="text-xl font-display font-bold text-gold mb-3">Planning</h3><p class="text-muted text-sm leading-relaxed">Strategic urban and architectural planning that balances aesthetics, functionality, and environmental sustainability.</p></div></div>
+                    <div class="hidden md:block md:w-1/2"></div>
+                </div>
+                <div class="relative mb-16 md:mb-24 flex items-center">
+                    <div class="reveal-scale absolute left-4 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gold border-4 border-night z-20 flex items-center justify-center text-night"><i class="fas fa-pencil-ruler"></i></div>
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div class="reveal-right w-full md:w-1/2 md:pl-12 pl-16 text-left relative overflow-hidden"><div class="process-number left-0">02</div><div class="bg-charcoal p-8 rounded-xl border border-ash relative z-10"><h3 class="text-xl font-display font-bold text-gold mb-3">Design</h3><p class="text-muted text-sm leading-relaxed">Translating plans into detailed blueprints, integrating aesthetic brilliance with structural integrity and standards.</p></div></div>
+                </div>
+                <div class="relative mb-16 md:mb-24 flex items-center">
+                    <div class="reveal-scale absolute left-4 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gold border-4 border-night z-20 flex items-center justify-center text-night"><i class="fas fa-hammer"></i></div>
+                    <div class="reveal-left w-full md:w-1/2 md:pr-12 pl-16 md:pl-0 md:text-right relative overflow-hidden"><div class="process-number right-0">03</div><div class="bg-charcoal p-8 rounded-xl border border-ash relative z-10"><h3 class="text-xl font-display font-bold text-gold mb-3">Execution</h3><p class="text-muted text-sm leading-relaxed">Meticulous project management, ensuring uncompromising quality, safety, and strict adherence to timelines.</p></div></div>
+                    <div class="hidden md:block md:w-1/2"></div>
+                </div>
+                <div class="relative flex items-center">
+                    <div class="reveal-scale absolute left-4 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gold border-4 border-night z-20 flex items-center justify-center text-night"><i class="fas fa-paint-roller"></i></div>
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div class="reveal-right w-full md:w-1/2 md:pl-12 pl-16 text-left relative overflow-hidden"><div class="process-number left-0">04</div><div class="bg-charcoal p-8 rounded-xl border border-ash relative z-10"><h3 class="text-xl font-display font-bold text-gold mb-3">Finishing</h3><p class="text-muted text-sm leading-relaxed">Delivering a neat finish with high-quality materials, ensuring durable and world-class structural results.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality & Future Section -->
+    <section id="quality-future" class="py-24 md:py-32 bg-charcoal">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="reveal-left p-8 border border-ash rounded-xl bg-night">
+                    <h3 class="text-2xl font-display font-bold text-gold mb-6">Quality Commitment</h3>
+                    <p class="text-muted leading-relaxed mb-4">High Standards: We always maintain quality at every stage of the work to ensure the best results.</p>
+                    <div class="grid grid-cols-2 gap-3 text-muted text-sm">
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-gold"></i> Quality materials</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-gold"></i> Strict work standards</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-gold"></i> Durable results</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-gold"></i> Neat finish</div>
+                    </div>
+                </div>
+                <div class="reveal-right p-8 border border-ash rounded-xl bg-night">
+                    <h3 class="text-2xl font-display font-bold text-gold mb-6">Future Plan</h3>
+                    <p class="text-muted leading-relaxed mb-4">Business Development: We continue to grow to expand our reach and improve our service quality.</p>
+                    <div class="grid grid-cols-2 gap-3 text-muted text-sm">
+                        <div class="flex items-center gap-2"><i class="fas fa-arrow-right text-gold"></i> Project expansion</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-arrow-right text-gold"></i> Team development</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-arrow-right text-gold"></i> Service innovation</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-arrow-right text-gold"></i> Quality improvement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Logo Marquee Section -->
+    <section id="partners" class="py-16 md:py-20 bg-night border-t border-b overflow-hidden" style="border-color: var(--border-faint);">
+        <div class="container mx-auto px-6 text-center mb-12 reveal">
+            <p class="text-gold tracking-[0.3em] text-xs uppercase mb-4">Our Trusted Network</p>
+            <h2 class="text-2xl md:text-3xl font-display font-bold leading-tight text-muted">Global Partners & Stakeholders</h2>
+        </div>
+        <div class="marquee relative">
+            <div class="absolute left-0 top-0 w-24 md:w-40 h-full bg-gradient-to-r from-night to-transparent pointer-events-none z-10"></div>
+            <div class="absolute right-0 top-0 w-24 md:w-40 h-full bg-gradient-to-l from-night to-transparent pointer-events-none z-10"></div>
+            <div class="marquee-content">
+                <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="partner-logo h-10 md:h-12 mx-8 md:mx-16"><img src="https://logo.clearbit.com/airbnb.com" alt="Airbnb" class="partner-logo h-10 md:h-12 mx-8 md:mx-16"><img src="https://logo.clearbit.com/spotify.com" alt="Spotify" class="partner-logo h-10 md:h-12 mx-8 md:mx-16"><img src="https://logo.clearbit.com/tesla.com" alt="Tesla" class="partner-logo h-10 md:h-12 mx-8 md:mx-16"><img src="https://logo.clearbit.com/zoom.us" alt="Zoom" class="partner-logo h-10 md:h-12 mx-8 md:mx-16"><img src="https://logo.clearbit.com/slack.com" alt="Slack" class="partner-logo h-10 md:h-12 mx-8 md:mx-16">
+                <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="partner-logo h-10 md:h-12 mx-8 md:mx-16"><img src="https://logo.clearbit.com/airbnb.com" alt="Airbnb" class="partner-logo h-10 md:h-12 mx-8 md:mx-16"><img src="https://logo.clearbit.com/spotify.com" alt="Spotify" class="partner-logo h-10 md:h-12 mx-8 md:mx-16"><img src="https://logo.clearbit.com/tesla.com" alt="Tesla" class="partner-logo h-10 md:h-12 mx-8 md:mx-16"><img src="https://logo.clearbit.com/zoom.us" alt="Zoom" class="partner-logo h-10 md:h-12 mx-8 md:mx-16"><img src="https://logo.clearbit.com/slack.com" alt="Slack" class="partner-logo h-10 md:h-12 mx-8 md:mx-16">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-night border-t border-ash py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center"><div class="mb-6 md:mb-0 text-center md:text-left"><div class="text-2xl font-display font-extrabold tracking-wider text-main">TWIN<span class="text-gold">SHELTER</span></div><p class="text-xs tracking-[0.3em] text-muted uppercase mt-2">Planners | Developers | Managers</p></div><div class="flex gap-6 text-muted text-xl"><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-linkedin"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-instagram"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-twitter"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-facebook"></i></a></div></div>
+        <div class="container mx-auto px-6 mt-8 pt-8 border-t text-center" style="border-color: var(--border-faint);"><p class="text-muted text-xs">© 2024 Twinshelter Consult Ltd. RC-7861108. All Rights Reserved.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

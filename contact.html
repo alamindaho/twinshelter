@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWINSHELTER CONSULT LTD - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>try { if (localStorage.getItem('theme') === 'light') { document.documentElement.classList.add('light-theme'); } } catch (e) {}</script>
+    <script>tailwind.config = { theme: { extend: { colors: { 'gold': '#EBCB48', 'night': 'var(--bg-primary)', 'charcoal': 'var(--bg-secondary)', 'ash': 'var(--border-color)', 'main': 'var(--text-primary)', 'muted': 'var(--text-secondary)' }, fontFamily: { 'display': ['Syne', 'sans-serif'], 'body': ['Inter', 'sans-serif'] }}}} </script>
+</head>
+<body class="bg-night text-main">
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 ease-out py-6">
+        <div class="w-full px-6 md:px-8 flex justify-between items-center">
+            
+            <!-- Logo Area (Icon + Text) -->
+            <a href="index.html" class="flex items-center gap-3 z-50">
+                <!-- Replace src with your actual logo image path -->
+                <img src="images/twinshelter-logo.png" alt="TWINSHELTER Icon" class="h-10 w-10 md:h-12 md:w-12 object-cover border border-ash">
+                <div class="flex flex-col">
+                    <div class="text-1xl font-display font-extrabold tracking-wider text-main">TWIN<span class="text-gold">SHELTER</span></div>
+                    <div class="text-[10px] tracking-[0.3em] text-muted uppercase">CONSULT LTD | RC-7861108</div>
+                </div>
+            </a>
+
+            <ul class="hidden md:flex items-center space-x-8 text-sm font-medium uppercase tracking-wider">
+                <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+                <li><a href="about.html" class="hover:text-gold transition-colors">About Us</a></li>
+                <li><a href="services.html" class="hover:text-gold transition-colors">Services</a></li>
+                <li><a href="projects.html" class="hover:text-gold transition-colors">Projects</a></li>
+                <li><button class="theme-toggle hover:text-gold transition-colors text-lg flex items-center justify-center w-8 h-8"><i class="theme-icon fas fa-sun"></i></button></li>
+                <li><a href="contact.html" class="bg-gold text-night px-5 py-3 rounded-full hover:bg-white hover:text-night transition-all duration-300 font-bold">Contact Us</a></li>
+            </ul>
+            <div class="md:hidden flex items-center space-x-4 z-50 relative"><button class="theme-toggle text-main text-xl"><i class="theme-icon fas fa-sun"></i></button><button id="menuToggle" class="text-main text-2xl"><i class="fas fa-bars"></i></button></div>
+        </div>
+        <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+            <div class="px-6 md:px-8 flex flex-col space-y-3 text-lg font-display uppercase mt-4 pt-4 border-t" style="border-color: var(--border-faint);"><a href="index.html" class="mobile-link text-gold py-2">Home</a><a href="about.html" class="mobile-link hover:text-gold py-2">About Us</a><a href="services.html" class="mobile-link hover:text-gold py-2">Services</a><a href="projects.html" class="mobile-link hover:text-gold py-2">Projects</a><a href="contact.html" class="mobile-link hover:text-gold py-2">Contact Us</a></div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative pt-40 pb-24 md:pt-48 md:pb-32 bg-charcoal overflow-hidden border-b border-ash">
+        <div class="absolute inset-0 contact-overlay z-0"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <p class="text-gold tracking-[0.4em] text-xs md:text-sm uppercase mb-4 reveal">Get In Touch</p>
+            <h1 class="text-4xl md:text-6xl font-display font-extrabold leading-tight text-main reveal">Let's Work Together</h1>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 md:py-32 bg-night relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal-left">
+                    <h2 class="text-3xl md:text-5xl font-display font-bold leading-tight mb-6 text-main">We are ready to be your <span class="text-gold">trusted partner</span></h2>
+                    <p class="text-muted mb-8">Whether you are planning a landmark development or seeking expert management for your portfolio, our team is ready to elevate your vision.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4"><div class="w-12 h-12 bg-night border border-ash rounded-full flex items-center justify-center text-gold"><i class="fas fa-phone-alt"></i></div><p class="text-muted text-sm">+234-806-010-7483</p></div>
+                        <div class="flex items-center gap-4"><div class="w-12 h-12 bg-night border border-ash rounded-full flex items-center justify-center text-gold"><i class="fas fa-envelope"></i></div><p class="text-muted text-sm">contact@twinshelter.com</p></div>
+                        <div class="flex items-center gap-4"><div class="w-12 h-12 bg-night border border-ash rounded-full flex items-center justify-center text-gold"><i class="fas fa-globe"></i></div><p class="text-muted text-sm">www.twinshelter.com</p></div>
+                    </div>
+                </div>
+                <form class="bg-night p-8 rounded-xl shadow-2xl border border-ash reveal-right">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4"><input type="text" placeholder="First Name" class="w-full bg-charcoal border border-ash rounded-lg px-4 py-3 text-main focus:outline-none focus:border-gold transition-colors" style="color: var(--text-primary);"><input type="text" placeholder="Last Name" class="w-full bg-charcoal border border-ash rounded-lg px-4 py-3 text-main focus:outline-none focus:border-gold transition-colors" style="color: var(--text-primary);"></div>
+                    <input type="email" placeholder="Email Address" class="w-full bg-charcoal border border-ash rounded-lg px-4 py-3 mb-4 text-main focus:outline-none focus:border-gold transition-colors" style="color: var(--text-primary);">
+                    <textarea rows="4" placeholder="Tell us about your project..." class="w-full bg-charcoal border border-ash rounded-lg px-4 py-3 mb-6 text-main focus:outline-none focus:border-gold transition-colors resize-none" style="color: var(--text-primary);"></textarea>
+                    <button type="submit" class="w-full bg-gold text-night py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-white hover:text-night transition-all duration-300">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section id="map" class="pb-24 md:pb-32 bg-night">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+                <p class="text-gold tracking-[0.3em] text-xs uppercase mb-4">Find Us</p>
+                <h2 class="text-3xl md:text-5xl font-display font-bold leading-tight text-main">Our <span class="text-gold">Location</span></h2>
+                <p class="text-muted mt-4">Visit our office or schedule a meeting with our team.</p>
+            </div>
+            <div class="relative overflow-hidden rounded-xl border border-ash shadow-2xl reveal-scale h-[450px] md:h-[550px] z-10">
+                <!-- Replace the src link below with your actual Google Maps embed link -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15611.873451184241!2d8.536538000000004!3d11.976691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1793107774236!5m2!1sen!2sng"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="map-iframe absolute top-0 left-0 w-full h-full">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-night border-t border-ash py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center"><div class="mb-6 md:mb-0 text-center md:text-left"><div class="text-2xl font-display font-extrabold tracking-wider text-main">TWIN<span class="text-gold">SHELTER</span></div><p class="text-xs tracking-[0.3em] text-muted uppercase mt-2">Planners | Developers | Managers</p></div><div class="flex gap-6 text-muted text-xl"><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-linkedin"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-instagram"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-twitter"></i></a><a href="#" class="hover:text-gold transition-colors"><i class="fab fa-facebook"></i></a></div></div>
+        <div class="container mx-auto px-6 mt-8 pt-8 border-t text-center" style="border-color: var(--border-faint);"><p class="text-muted text-xs">© 2024 Twinshelter Consult Ltd. RC-7861108. All Rights Reserved.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
