@@ -1,13 +1,10 @@
+// Preloader Logic
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) { setTimeout(() => { preloader.classList.add('loaded'); }, 1500); }
 });
 
-const cursor = document.getElementById('cursorGlow');
-if (cursor) {
-    document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
-}
-
+// Theme Toggle Logic
 const themeToggles = document.querySelectorAll('.theme-toggle');
 const htmlEl = document.documentElement;
 
@@ -29,6 +26,7 @@ themeToggles.forEach(toggle => {
     });
 });
 
+// Floating Pill Navbar Logic
 const navbar = document.getElementById('navbar');
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -72,12 +70,14 @@ if (navbar && menuToggle && mobileMenu) {
     }));
 }
 
+// ENHANCED SCROLL REVEAL LOGIC
 const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .timeline-draw');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); } });
 }, { threshold: 0.15 });
 revealElements.forEach(el => observer.observe(el));
 
+// NUMBER COUNT UP ANIMATION
 const statsContainer = document.getElementById('stats-container');
 if (statsContainer) {
     const statNumbers = document.querySelectorAll('.stat-number');
