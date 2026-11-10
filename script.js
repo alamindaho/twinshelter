@@ -102,3 +102,32 @@ if (statsContainer) {
     }, { threshold: 0.5 });
     statsObserver.observe(statsContainer);
 }
+
+
+
+
+// PROJECT FILTER LOGIC
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card-full');
+
+if (filterButtons.length > 0) {
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
+            
+            const filter = btn.dataset.filter;
+            
+            projectCards.forEach(card => {
+                // Check if the card's category contains the filter word
+                if (filter === 'all' || card.dataset.category.includes(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+}

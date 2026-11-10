@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TWINSHELTER CONSULT LTD - Projects</title>
+    <title>TWINSHELTER - Projects</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -52,6 +52,129 @@
     </header>
 
     <!-- Projects Grid Section -->
+        <!-- Projects Filter & Grid Section -->
+    <section id="projects-grid" class="py-24 md:py-32 bg-night">
+        <div class="container mx-auto px-6 max-w-7xl">
+            
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="engineering">Engineering</button>
+                <button class="filter-btn" data-filter="real-estate">Real Estate</button>
+                <button class="filter-btn" data-filter="construction">Construction</button>
+                <button class="filter-btn" data-filter="drainage">Drainage</button>
+                <button class="filter-btn" data-filter="consultancy">Consultancy</button>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="project-card-full reveal-scale" data-category="engineering construction">
+                    <div class="bg-charcoal border border-ash rounded-xl p-6 h-full flex flex-col hover:border-gold transition-colors duration-300">
+                        <span class="text-gold text-xs uppercase tracking-widest mb-3">2022 · Engineering</span>
+                        <h3 class="text-xl font-display font-bold text-main mb-4">Kano Commercial Complex</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Engineering</span>
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Commercial</span>
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Kano</span>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">6,000 sqm commercial complex civil, structural, and MEP works in Kano business district.</p>
+                        <div class="mt-auto pt-4 border-t border-ash">
+                            <p class="text-xs text-muted mb-1"><span class="text-gold font-bold">Scope:</span> Structural review, foundation, reinforced concrete, MEP installation.</p>
+                            <p class="text-xs text-muted"><span class="text-gold font-bold">Result:</span> 3 weeks early, 4% under budget, zero safety incidents.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="project-card-full reveal-scale" data-category="real-estate construction">
+                    <div class="bg-charcoal border border-ash rounded-xl p-6 h-full flex flex-col hover:border-gold transition-colors duration-300">
+                        <span class="text-gold text-xs uppercase tracking-widest mb-3">2023 · Real Estate</span>
+                        <h3 class="text-xl font-display font-bold text-main mb-4">Luxury Estate Development</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Real Estate</span>
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Residential</span>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Acquisition, planning, and full-scale development of a gated residential community.</p>
+                        <div class="mt-auto pt-4 border-t border-ash">
+                            <p class="text-xs text-muted mb-1"><span class="text-gold font-bold">Scope:</span> Land acquisition, estate management, infrastructure development.</p>
+                            <p class="text-xs text-muted"><span class="text-gold font-bold">Result:</span> 100% occupancy within 3 months, 25% increase in property value.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="project-card-full reveal-scale" data-category="drainage consultancy">
+                    <div class="bg-charcoal border border-ash rounded-xl p-6 h-full flex flex-col hover:border-gold transition-colors duration-300">
+                        <span class="text-gold text-xs uppercase tracking-widest mb-3">2023 · Infrastructure</span>
+                        <h3 class="text-xl font-display font-bold text-main mb-4">West Africa Drainage Corridor</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Drainage</span>
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Interlock</span>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Comprehensive town planning and installation of drainage systems and interlock pavements.</p>
+                        <div class="mt-auto pt-4 border-t border-ash">
+                            <p class="text-xs text-muted mb-1"><span class="text-gold font-bold">Scope:</span> Town planning, landscape architecture, land development consultancy.</p>
+                            <p class="text-xs text-muted"><span class="text-gold font-bold">Result:</span> Reduced flood risk by 80%, 42% faster installation cycle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="project-card-full reveal-scale" data-category="construction">
+                    <div class="bg-charcoal border border-ash rounded-xl p-6 h-full flex flex-col hover:border-gold transition-colors duration-300">
+                        <span class="text-gold text-xs uppercase tracking-widest mb-3">2022 · Construction</span>
+                        <h3 class="text-xl font-display font-bold text-main mb-4">Bungalow Enlargement Project</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Residential</span>
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Modification</span>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Modification, pulling down, rebuilding, and enlargement of existing residential structures.</p>
+                        <div class="mt-auto pt-4 border-t border-ash">
+                            <p class="text-xs text-muted mb-1"><span class="text-gold font-bold">Scope:</span> Structural modification, rebuilding, modern finishing.</p>
+                            <p class="text-xs text-muted"><span class="text-gold font-bold">Result:</span> Seamless integration with existing structure, high-quality finish.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="project-card-full reveal-scale" data-category="consultancy real-estate">
+                    <div class="bg-charcoal border border-ash rounded-xl p-6 h-full flex flex-col hover:border-gold transition-colors duration-300">
+                        <span class="text-gold text-xs uppercase tracking-widest mb-3">2023 · Consultancy</span>
+                        <h3 class="text-xl font-display font-bold text-main mb-4">Urban Master Planning</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Urban</span>
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Planning</span>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Strategic urban and architectural planning to balance aesthetics, functionality, and environment.</p>
+                        <div class="mt-auto pt-4 border-t border-ash">
+                            <p class="text-xs text-muted mb-1"><span class="text-gold font-bold">Scope:</span> Town planning, landscape architecture, development consultancy.</p>
+                            <p class="text-xs text-muted"><span class="text-gold font-bold">Result:</span> Approved regulatory compliance, optimized land use by 30%.</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Card 6 -->
+                 <div class="project-card-full reveal-scale" data-category="engineering construction">
+                    <div class="bg-charcoal border border-ash rounded-xl p-6 h-full flex flex-col hover:border-gold transition-colors duration-300">
+                        <span class="text-gold text-xs uppercase tracking-widest mb-3">2023 · Engineering</span>
+                        <h3 class="text-xl font-display font-bold text-main mb-4">General Civil Engineering Works</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Civil</span>
+                            <span class="text-[10px] bg-night border border-ash rounded-full px-3 py-1 text-muted">Infrastructure</span>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Erection and construction of general civil engineering works for commercial flats.</p>
+                        <div class="mt-auto pt-4 border-t border-ash">
+                            <p class="text-xs text-muted mb-1"><span class="text-gold font-bold">Scope:</span> Site prep, foundation laying, structural framework.</p>
+                            <p class="text-xs text-muted"><span class="text-gold font-bold">Result:</span> Durable results, strict work standards maintained throughout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects-grid" class="py-24 md:py-32 bg-night">
         <div class="container mx-auto px-6">
             
